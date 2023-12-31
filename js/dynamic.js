@@ -20,6 +20,10 @@ if(queryString.from){
   document.getElementById("from").innerHTML=queryString.from;
 }
 
+document.addEventListener("click",()=>{    
+  document.getElementById('music').play();
+  document.removeEventListener('click', this);})
+
 function titleCase(str) {
    var splitStr = str.toLowerCase().split(' ');
    for (var i = 0; i < splitStr.length; i++) {
@@ -30,3 +34,4 @@ function titleCase(str) {
    // Directly return the joined string
    return splitStr.join(' '); 
 }
+
